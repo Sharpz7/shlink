@@ -1,0 +1,40 @@
+version: 2.1
+
+jobs:
+  deploy:
+    docker:
+      - image: cimg/base:2020.01
+
+    steps:
+      - checkout
+
+      - run:
+          name: "Install SharpCD"
+          command: |
+            wget https://github.com/Sharpz7/sharpcd/releases/download/0.1.0/linux.tar.gz
+            sudo tar -C /usr/local/bin/ -zxvf linux.tar.gz
+            rm -r linux.tar.gz
+
+            chmod u+x /usr/local/bin/sharpcd
+
+      - run:
+          name: "Setup Env"
+          command: |
+            echo "GEOLITE_LICENSE_KEY=${GEOLITE_LICENSE_KEY}" > .env
+            echo "POSTPASS=${POSTPASS}" >> .env
+
+      - run:
+          name: "SharpCD Deploy"
+          command: |
+            sharpcd --secret ${SHARPCD_SECRET}
+
+workflows:
+  version: 2
+  workflow:
+    jobs:
+      - deploy:
+          context: General
+
+          filters:
+            branches:
+              only: main

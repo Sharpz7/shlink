@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  shlink:
+    hostname: shlink
+    image: shlinkio/shlink:stable
+
+    environment:
+      SHORT_DOMAIN_HOST: l.mcaq.me
+      SHORT_DOMAIN_SCHEMA: https
+      GEOLITE_LICENSE_KEY: ${GEOLITE_LICENSE_KEY}
+      DB_DRIVER: postgres
+      DB_USER: postgres
+      DB_PASSWORD: ${POSTPASS}
+      DB_HOST: postgres
+
+    restart: always
+
+volumes:
+  shlink:
+
+networks:
+    default:
+        external:
+            name: sharpnet
