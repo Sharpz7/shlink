@@ -3,7 +3,7 @@ version: "3.7"
 services:
   shlink:
     hostname: shlink
-    image: shlinkio/shlink:stable
+    image: sharp6292/shlink:latest
 
     environment:
       SHORT_DOMAIN_HOST: l.mcaq.me

@@ -1,6 +1,23 @@
 version: 2.1
 
 jobs:
+  build:
+    docker:
+      - image: docker:stable
+
+    steps:
+      - checkout
+
+      - setup_remote_docker
+
+      - run:
+          name: "Build"
+          command: |
+            docker login -u $DOCKER_USER -p $DOCKER_PASS
+            docker pull sharp6292/shlink:latest || true
+            docker build --cache-from sharp6292/shlink:latest -t sharp6292/shlink:latest .
+            docker push sharp6292/shlink:latest
+
   deploy:
     docker:
       - image: cimg/base:2020.01
@@ -32,8 +49,14 @@ workflows:
   version: 2
   workflow:
     jobs:
+      - build:
+          context: General
+
+
       - deploy:
           context: General
+          requires:
+            - build
 
           filters:
             branches:
