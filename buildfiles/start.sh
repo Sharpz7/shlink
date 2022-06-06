@@ -1,9 +1,9 @@
 #!/bin/sh
 
 # Replace commas with spaces
-SHARPDOMAINS=$(echo $SHARPDOMAINS | sed 's/,/ /g')
+SHARPDOMAIN=$(echo $SHARPDOMAIN | sed 's/,/ /g')
 
-sed -i "s/XXXXX/$SHARPDOMAINS/g" /sharpnet/nginx.conf
+sed -i "s/XXXXX/$SHARPDOMAIN/g" /sharpnet/nginx.conf
 
 cat /sharpnet/nginx.conf
 

@@ -17,7 +17,7 @@ jobs:
           command: |
             echo "GEOLITE_LICENSE_KEY=${GEOLITE_LICENSE_KEY}" > .env
             echo "POSTPASS=${POSTPASS}" >> .env
-            echo "SHARPDOMAINS=${SHARPDOMAINS}" >> .env
+            echo "DOMAIN=${DOMAIN}" >> .env
 
       - sharpcd/deploy
 

@@ -22,7 +22,7 @@ GEOLITE_LICENSE_KEY=your_key
 POSTPASS=postgres_password
 
 # Domains that shlink will be available on
-SHARPDOMAINS=domain1.com,domain2.com
+DOMAIN=domain1.com,domain2.com
 
 #=============================
 

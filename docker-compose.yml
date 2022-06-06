@@ -6,14 +6,14 @@ services:
     image: sharp6292/shlink:latest
 
     environment:
-      SHORT_DOMAIN_HOST: l.mcaq.me
+      SHORT_DOMAIN_HOST: ${DOMAIN:?err}
       SHORT_DOMAIN_SCHEMA: https
       GEOLITE_LICENSE_KEY: ${GEOLITE_LICENSE_KEY:?err}
       DB_DRIVER: postgres
       DB_USER: postgres
       DB_PASSWORD: ${POSTPASS:?err}
       DB_HOST: postgres
-      SHARPDOMAINS: ${SHARPDOMAINS:?err}
+      SHARPDOMAIN: ${DOMAIN:?err}
 
     restart: always
 
