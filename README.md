@@ -25,8 +25,11 @@ SHARPDOMAINS=domain1.com,domain2.com
 
 #=============================
 
+# Email and password for PGAdmin
 ADMIN_EMAIL=myemail@mail.com
 ADMINPASS=pgadminpass
+
+# Password for postgres
 POSTPASS=postgrespass
 
 #=============================
