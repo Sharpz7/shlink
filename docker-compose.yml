@@ -6,7 +6,7 @@ services:
     image: sharp6292/shlink:latest
 
     environment:
-      DEFAULT_DOMAIN: ${DOMAIN:?err}
+      DEFAULT_DOMAIN: l.mcaq.me
       IS_HTTPS_ENABLED: true
       GEOLITE_LICENSE_KEY: ${GEOLITE_LICENSE_KEY:?err}
       DB_DRIVER: postgres
