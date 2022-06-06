@@ -6,8 +6,8 @@ services:
     image: sharp6292/shlink:latest
 
     environment:
-      SHORT_DOMAIN_HOST: ${DOMAIN:?err}
-      SHORT_DOMAIN_SCHEMA: https
+      DEFAULT_DOMAIN: ${DOMAIN:?err}
+      IS_HTTPS_ENABLED: true
       GEOLITE_LICENSE_KEY: ${GEOLITE_LICENSE_KEY:?err}
       DB_DRIVER: postgres
       DB_USER: postgres
