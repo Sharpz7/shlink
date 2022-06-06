@@ -13,6 +13,7 @@ services:
       DB_USER: postgres
       DB_PASSWORD: ${POSTPASS:?err}
       DB_HOST: postgres
+      SHARPDOMAINS: ${SHARPDOMAINS:?err}
 
     restart: always
 
