@@ -18,6 +18,7 @@ A link shortener using [Shlink](https://shlink.io/) designed to run with [SharpN
 
 ```env
 GEOLITE_LICENSE_KEY=your_key
+# Password for postgres
 POSTPASS=postgres_password
 
 # Domains that shlink will be available on
@@ -28,9 +29,6 @@ SHARPDOMAINS=domain1.com,domain2.com
 # Email and password for PGAdmin
 ADMIN_EMAIL=myemail@mail.com
 ADMINPASS=pgadminpass
-
-# Password for postgres
-POSTPASS=postgrespass
 
 #=============================
 
