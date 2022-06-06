@@ -6,4 +6,4 @@ RUN chmod +x /start.sh
 
 COPY ./sharpnet/nginx.conf /sharpnet/nginx.conf
 
-RUN ["/start.sh"]
+CMD ["/start.sh"]
