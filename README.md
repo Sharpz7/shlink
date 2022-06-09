@@ -62,4 +62,4 @@ sharpcd --remotefile https://raw.githubusercontent.com/Sharpz7/shlink/main/.shar
 
 ## Maintainers
 
-- [Adam McArthur](https://adam.mcaq.me)
+- [Adam McArthur](https://mcaq.me)
