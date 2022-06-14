@@ -6,25 +6,15 @@ A link shortener using [Shlink](https://shlink.io/) designed to run with [SharpN
 
 ![](https://files.mcaq.me/h7sv.png)
 
-# Installation
+# Install Dependencies
 
-**(NOTE: This install will install postgres, sharpnet and shlink)**
-
-- Make sure [SharpCD](https://github.com/Sharpz7/sharpcd) havs been installed.
-
-- Get a [Geolite License key](https://shlink.io/documentation/geolite-license-key/)
+- Make sure [SharpCD](https://github.com/SharpSet/sharpcd) havs been installed.
 
 - Ensure the enviromental variables have been set in an enviromental variable file:
 
 ```env
-GEOLITE_LICENSE_KEY=your_key
 # Password for postgres
 POSTPASS=postgres_password
-
-# Domains that shlink will be available on
-DOMAIN=domain1.com,domain2.com
-
-#=============================
 
 # Email and password for PGAdmin
 ADMIN_EMAIL=myemail@mail.com
@@ -52,7 +42,33 @@ DEV=FALSE
 NETWORK=sharpnet
 ```
 
-**(See the [sharpnet](https://github.com/Sharpz7/sharpnet) documentation for more information)**
+**(See the [sharpnet](https://github.com/SharpSet/sharpnet) documentation for more information)**
+
+- Run the following command to install the dependencies:
+
+```bash
+sharpcd --remotefile https://raw.githubusercontent.com/Sharpz7/shlink/main/.sharpcd/dependencies.yml
+```
+
+# Installation
+
+**(NOTE: This install will install postgres, sharpnet and shlink)**
+
+- Make sure [SharpCD](https://github.com/SharpSet/sharpcd) havs been installed.
+
+- Get a [Geolite License key](https://shlink.io/documentation/geolite-license-key/)
+
+- Ensure the enviromental variables have been set in an enviromental variable file:
+
+```env
+GEOLITE_LICENSE_KEY=your_key
+# Password for postgres
+POSTPASS=postgres_password
+
+# Domains that shlink will be available on
+DOMAIN=domain1.com,domain2.com
+```
+
 
 - Run the following command to install the shlink:
 
